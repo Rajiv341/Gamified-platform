@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-container">
+        <header class="game-header">
+            <div class="stat-box">Level: <span id="level-indicator">1</span></div>
+            <h1>Word Builder 🛠️</h1>
+            <div class="stat-box">Score: <span id="score-indicator">0</span></div>
+        </header>
+
+        <div class="hint-area">
+            <button id="hint-btn">💡 Hint</button>
+            <img id="hint-image" src="" alt="Hint Image" class="hidden">
+        </div>
+        
+        <main class="construction-zone" id="letter-slots">
+            </main>
+
+        <div class="feedback-message" id="feedback-message"></div>
+
+        <footer class="letter-pile" id="jumbled-letters">
+            </footer>
+
+        <button id="next-word-btn" class="hidden">Next Word &rarr;</button>
+
+    </div>
+
+    <audio id="bg-music" src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" loop></audio>
+    <audio id="drop-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-game-ball-tap-2073.mp3"></audio>
+    <audio id="correct-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-video-game-win-2016.mp3"></audio>
+    <audio id="wrong-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-player-losing-or-failing-2042.mp3"></audio>
+    
+    <button id="mute-btn">🎵</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

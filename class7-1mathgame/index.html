@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Treasure Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen">
+        <div class="start-content">
+            <h1>Math Treasure Map</h1>
+            <p>Integers ka Khazana</p>
+            <button id="start-btn">Start Game</button>
+        </div>
+    </div>
+
+    <div id="game-wrapper" style="display: none;">
+        <header>
+            <h1>Math Treasure Map</h1>
+            <button id="mute-btn" class="control-btn">🔊 Mute</button>
+            <audio id="bg-music" src="assets/game-music.mp3" loop></audio>
+            <audio id="sfx-success" src="success.mp3"></audio>
+            <audio id="sfx-error" src="error.mp3"></audio>
+        </header>
+
+        <main>
+            <div id="game-info">
+                <h2 id="level-title"></h2>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+
+            <div id="game-board">
+                </div>
+        </main>
+    </div>
+
+    <div id="problem-modal" style="display: none;">
+        <div class="modal-content">
+            <p id="question-text">Question goes here</p>
+            <input type="number" id="answer-input" placeholder="Jawab likho...">
+            <button id="submit-answer-btn">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

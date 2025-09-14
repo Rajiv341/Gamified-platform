@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Chain</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for storybook feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Story Chain 📜✨</h1>
+            <div class="stats">
+                <!-- SCORE ELEMENT YAHAN ADD KIYA GAYA HAI -->
+                <div class="stat-item">Level: <span id="level">1</span></div>
+                <div class="stat-item">Score: <span id="score">0</span></div>
+            </div>
+            <div class="story-chain-progress" id="story-chain-progress">
+                <!-- Links will be added here by JS -->
+            </div>
+        </header>
+
+        <main class="story-parchment" id="story-parchment">
+            <p id="story-text"></p>
+        </main>
+
+        <footer class="word-chest" id="word-chest">
+            <!-- Draggable word tiles will be added here by JS -->
+        </footer>
+
+        <button id="next-level-btn" class="hidden">Continue the Adventure &rarr;</button>
+    </div>
+
+    <!-- Narration Modal -->
+    <div id="narration-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">Story Complete!</h2>
+            <img id="modal-image" src="" alt="Story Illustration">
+            <p id="modal-story"></p>
+            <button id="narrate-btn">Listen to the Story 🔊</button>
+            <button id="close-modal-btn">Close</button>
+        </div>
+    </div>
+    
+    <!-- Audio Elements -->
+    <audio id="bg-music" src="assets/bg-music.mp3" loop></audio>
+    <audio id="drop-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-hard-pop-click-2364.mp3"></audio>
+    <audio id="correct-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-magic-chime-2612.mp3"></audio>
+    <audio id="wrong-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-long-buzzer-954.mp3"></audio>
+    <audio id="level-complete-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-completing-a-level-2066.mp3"></audio>
+
+    <button id="mute-btn">🎵</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

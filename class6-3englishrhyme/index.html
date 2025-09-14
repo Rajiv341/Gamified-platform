@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhyme Time</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-container">
+        <header class="game-header">
+            <div class="stat-box">Level: <span id="level-indicator">1</span></div>
+            <h1>Rhyme Time</h1>
+            <div class="stat-box">Score: <span id="score-indicator">0</span></div>
+        </header>
+
+        <main class="game-board">
+            <canvas id="line-canvas"></canvas>
+            <div class="word-column" id="left-column">
+                </div>
+            <div class="word-column" id="right-column">
+                </div>
+        </main>
+        
+        <div class="feedback-area">
+             <button id="next-level-btn" class="hidden">Next Level &rarr;</button>
+        </div>
+    </div>
+
+    <audio id="bg-music" src="https://www.bensound.com/bensound-music/bensound-dreams.mp3" loop></audio>
+    <audio id="correct-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-magic-harp-swoosh-1490.mp3"></audio>
+    <audio id="wrong-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-leaf-rustle-2011.mp3"></audio>
+    <audio id="level-complete-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-joyous-fanfare-2019.mp3"></audio>
+
+    <button id="mute-btn">🎵</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
