@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Ninja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen">
+        <div class="start-content">
+            <h1>Grammar Ninja</h1>
+            <p>Master the Tenses!</p>
+            <button id="start-btn">Start Training</button>
+        </div>
+    </div>
+
+    <div id="game-wrapper" style="display: none;">
+        <header>
+            <div id="game-info">
+                <h2 id="level-title"></h2>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+            <button id="mute-btn">🔊 Mute</button>
+            <audio id="bg-music" src="assets/game-music.mp3" loop></audio>
+            <audio id="sfx-correct" src="correct.mp3"></audio>
+            <audio id="sfx-wrong"src="wrong.mp3"></audio>
+        </header>
+
+        <main id="game-area">
+            <div id="timer-container">
+                <div id="timer-bar"></div>
+            </div>
+            <div id="sentence-container">
+                <span id="part1"></span>
+                <span class="blank">_________</span>
+                <span id="part2"></span>
+            </div>
+            <div id="options-container">
+                </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

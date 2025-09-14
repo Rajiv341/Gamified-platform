@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jungle Explorer - Fractions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🌴 Jungle Explorer - Fractions</h1>
+  <p id="level">Level: 1 (Simple Fractions)</p>
+
+  <div class="game-container">
+    <img id="avatar" src="avatar.png" alt="Explorer">
+    <img id="bridge" src="assets/bridge.png" alt="Bridge">
+    <img id="fruit" src="assets/fruit.png" alt="Fruit">
+
+    <div id="question-box">
+      <p id="question">Loading fraction puzzle...</p>
+      <div id="options"></div>
+      <p id="score">🍎 Fruits Collected: 0</p>
+    </div>
+  </div>
+
+  <button onclick="toggleMusic()">🎵 Jungle Music On/Off</button>
+  <audio id="bg-music" src="bg-jungle.mp3" autoplay loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

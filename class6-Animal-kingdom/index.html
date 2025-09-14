@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Kingdom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="game-header">
+            <div>
+                <h1>Animal Kingdom 👑</h1>
+                <p>Drag each animal to its correct group.</p>
+            </div>
+            <div class="stats">
+                <div class="level-indicator" id="level-indicator">Level 1</div>
+                <div class="score-indicator">Score: <span id="score">0</span></div>
+            </div>
+        </div>
+        
+        <div class="drop-zones">
+            <div class="zone" id="herbivore" data-group="herbivore">
+                <h2>🌿 Herbivores (Plant Eaters)</h2>
+            </div>
+            <div class="zone" id="carnivore" data-group="carnivore">
+                <h2>🥩 Carnivores (Meat Eaters)</h2>
+            </div>
+            <div class="zone" id="omnivore" data-group="omnivore">
+                <h2>🌿🥩 Omnivores (Both)</h2>
+            </div>
+        </div>
+
+        <div class="animal-pen">
+            <h2>Animals</h2>
+            <div id="animals-container">
+                </div>
+        </div>
+        
+        <div class="feedback" id="feedback-message"></div>
+        <button id="next-level-btn" class="hidden">Next Level &rarr;</button>
+
+    </div>
+    
+    <audio id="bg-music" src="assets/bg-jungle-music.mp3" loop></audio>
+    <button id="mute-btn">🎵</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

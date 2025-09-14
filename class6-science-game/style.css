@@ -1,0 +1,175 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+
+body {
+    font-family: 'Baloo 2', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('assets/background.jpg');
+    background-size: 100%; /* Bada size animation ke liye */
+    background-position: center;
+    margin: 0;
+    /* Zinda Background Animation */
+    animation: moveBackground 60s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    border: 3px solid #fff;
+}
+
+.header h1 {
+    color: #2e7d32;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 0 #fff;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: -10px 0 20px 0;
+}
+
+/* Score ka Pop-up Animation */
+#score.pop {
+    animation: pop 0.5s ease-out;
+}
+@keyframes pop {
+    50% { transform: scale(1.6); color: #ff9800; }
+}
+
+.game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    perspective: 1000px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Particle effect ke liye */
+}
+
+.card-front {
+    background: linear-gradient(135deg, #8BC34A, #4CAF50);
+    font-size: 4em;
+    color: white;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    padding: 5px;
+}
+
+.function-card {
+    background: #fffbe9;
+    border: 5px solid #eaddb7;
+    color: #5a4b2a;
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1.2;
+}
+
+.image-card {
+    background: #f0f8ff;
+    font-size: 3.5em;
+}
+
+@keyframes fadeInContent {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.card.flipped .card-back span {
+    display: inline-block;
+    animation: fadeInContent 0.4s 0.3s backwards;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card.matched {
+    cursor: default;
+}
+
+/* Particle Effect CSS */
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #ffd700;
+    border-radius: 50%;
+    opacity: 0;
+}
+.card.matched .particle {
+    animation: burst 0.8s ease-out forwards;
+}
+@keyframes burst {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(var(--x), var(--y)) scale(0); opacity: 0; }
+}
+
+#next-level-btn, #mute-btn {
+    font-family: 'Baloo 2', cursive;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+#next-level-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background: #ff9800;
+    color: white;
+}
+#next-level-btn:hover {
+    background: #f57c00;
+    transform: scale(1.05);
+}
+.hidden { display: none; }
+
+#mute-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
