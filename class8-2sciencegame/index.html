@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen">
+        <div class="start-content">
+            <h1>Geometry Puzzle</h1>
+            <p>Become a Master Architect</p>
+            <button id="start-btn">Start Building</button>
+        </div>
+    </div>
+
+    <div id="game-wrapper" style="display: none;">
+        <header>
+            <div id="game-info">
+                <h2 id="level-title"></h2>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+            <button id="mute-btn">🔊 Mute</button>
+            <audio id="bg-music" src="assets/game-music.mp3" loop></audio>
+            <audio id="sfx-correct" src="correct.mp3"></audio>
+            <audio id="sfx-wrong" src="wrong.mp3"></audio>
+        </header>
+
+        <main id="game-area">
+            <div id="figure-showcase">
+                <h3 id="figure-title">Construct the Figure</h3>
+                <div id="figure-container">
+                    </div>
+            </div>
+            <div id="problem-panel">
+                <div id="question-container">
+                    <p id="question-text">Question text...</p>
+                    <div id="shape-image-container">
+                        <img id="shape-image" src="" alt="Geometric Shape">
+                    </div>
+                </div>
+                <div id="options-container">
+                    </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

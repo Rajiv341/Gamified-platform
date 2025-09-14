@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Body Quest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Human Body Quest 🩺</h1>
+            <div class="stats-container">
+                <div class="stat-box">Level: <span id="level-indicator">1</span></div>
+                <div class="stat-box">Score: <span id="score-indicator">0</span></div>
+            </div>
+        </header>
+
+        <main class="main-display">
+            <div class="body-chart-container">
+                <img id="brain" src="assets/brain.png" alt="Brain" class="organ">
+                <img id="lungs" src="assets/lungs.png" alt="Lungs" class="organ">
+                <img id="heart" src="assets/heart.png" alt="Heart" class="organ">
+                <img id="stomach" src="assets/stomach.png" alt="Stomach" class="organ">
+                <img id="intestines" src="assets/Intestines.png" alt="Intestines" class="organ">
+            </div>
+
+            <div class="clipboard-container">
+                <div id="start-panel">
+                    <h2 id="start-title">Welcome, Junior Scientist!</h2>
+                    <p id="start-description">Let's learn about the human body.</p>
+                    <div id="level-selection-buttons">
+                        </div>
+                </div>
+
+                <div id="quiz-panel" class="hidden">
+                    <div id="question-text">Question goes here...</div>
+                    <div id="answer-buttons" class="btn-grid">
+                        <button class="answer-btn">Answer 1</button>
+                        <button class="answer-btn">Answer 2</button>
+                        <button class="answer-btn">Answer 3</button>
+                        <button class="answer-btn">Answer 4</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <audio id="bg-music" src="assets/bg-humanmusic.mp3" loop></audio>
+    <audio id="correct-sound" src="assets/correctsound.mp3"></audio>
+    <audio id="wrong-sound"   src="assets/wrongsound.mp3"></audio>
+    <audio id="unlock-sound" src="assets/levelunlocksound.mp3"></audio>
+
+    <button id="mute-btn">🎵</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

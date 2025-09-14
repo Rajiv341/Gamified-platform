@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Circuit Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="start-screen">
+        <div class="start-content">
+            <h1>Circuit Builder</h1>
+            <p>Class 7th Science Edition</p>
+            <button id="start-btn">Start Game</button>
+        </div>
+    </div>
+
+    <div id="game-wrapper" style="display: none;">
+        
+        <header>
+            <h1>Circuit Builder</h1>
+            <button id="mute-btn" class="control-btn">🔊 Mute</button>
+            <audio id="bg-music" src="assets/game-music.mp3" loop></audio>
+            <audio id="sfx-success" src="assets/sucess.mp3"></audio>
+            <audio id="sfx-error" src="assets/error.mp3"></audio>
+        </header>
+
+        <main>
+            <div id="game-info">
+                <h2 id="level-title"></h2>
+                <p id="objective"></p>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+
+            <div id="game-container">
+                <div id="toolbox">
+                    <h3>Components</h3>
+                </div>
+                <div id="workspace">
+                    </div>
+            </div>
+
+            </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

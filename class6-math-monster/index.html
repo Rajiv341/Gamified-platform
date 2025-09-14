@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Monster Battle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>⚔️ Math Monster Battle 👾</h1>
+    <p id="level">Level 1: Addition</p>
+    <div class="battle">
+      <img id="hero" src="assets/hero.png" alt="Hero">
+      <img id="monster" src="assets/monster1.png" alt="Monster">
+    </div>
+    <h2 id="question">Question will appear here</h2>
+    <div id="options"></div>
+    <p id="feedback"></p>
+    <button id="next-btn">Next ➡️</button>
+  </div>
+  <audio id="bg-music" src="assets/bg-music.mp3" autoplay loop></audio>
+  <button onclick="toggleMusic()">🎵 Music On/Off</button>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
